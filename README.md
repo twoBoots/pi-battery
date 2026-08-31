@@ -29,7 +29,7 @@ While Battery provides a compiled CLI (`battery`) and Model Context Protocol ser
 ├────────────────────────────────────────────────────────────────────────┤
 │                                                                        │
 │  > /battery:status                                                     │
-│    🛢️⚡ Topology: multi-repo (3 registered barrels)                   │
+│    Topology: multi-repo (3 registered barrels)                         │
 │    • auth-service (../auth-service) [Go 1.22]                          │
 │    • web-dashboard (../web-dashboard) [TypeScript/React]               │
 │    • billing-api (../billing-api) [Rust 1.78]                          │
@@ -39,26 +39,26 @@ While Battery provides a compiled CLI (`battery`) and Model Context Protocol ser
                                     │
                      ┌──────────────▼──────────────┐
                      │         pi-battery          │
-                     │   (Native Pi Extension)     │
+                     │    (Native Pi Extension)    │
                      └──────┬───────┬───────┬──────┘
                             │       │       │
        ┌────────────────────┘       │       └────────────────────┐
        ▼                            ▼                            ▼
 ┌──────────────┐             ┌──────────────┐             ┌──────────────┐
-│  Workspace   │             │  Lifecycle   │             │ In-Process   │
-│ & Barrels    │             │ Event Hooks  │             │ Tool Registry│
+│  Workspace   │             │  Lifecycle   │             │  In-Process  │
+│  & Barrels   │             │ Event Hooks  │             │Tool Registry │
 │              │             │              │             │              │
-│• process.chdir             │• Multi-Notes │             │• Barrel ops  │
+│• Switch Dir  │             │• Multi-Notes │             │• Barrel ops  │
 │• Auto-Trust  │             │• Guardrails  │             │• Track ops   │
 │• Worktrees   │             │• Contracts   │             │• Spec audit  │
 └──────┬───────┘             └──────┬───────┘             └──────┬───────┘
        │                            │                            │
        └────────────────────┬───────┴────────────────────────────┘
                             ▼
-     ┌─────────────────────────────────────────────┐
-     │          Battery Engine / Config            │
-     │      (.batteryrc | .cooper/ | Barrels)      │
-     └─────────────────────────────────────────────┘
+             ┌─────────────────────────────────────────────┐
+             │          Battery Engine / Config            │
+             │      (.batteryrc | .cooper/ | Barrels)      │
+             └─────────────────────────────────────────────┘
 ```
 
 ---
