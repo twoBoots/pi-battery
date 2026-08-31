@@ -1,0 +1,58 @@
+{
+  "name": "pi-battery",
+  "version": "0.1.0",
+  "description": "Native Pi Coding Agent extension for the Battery Multi-Repository SDD Orchestration Protocol",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rolldown -c && tsc -p tsconfig.build.json --emitDeclarationOnly --outDir dist",
+    "dev": "rolldown -c --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "oxlint && tsc --noEmit"
+  },
+  "keywords": [
+    "pi",
+    "pi-agent",
+    "battery",
+    "cooper",
+    "sdd",
+    "multi-repo",
+    "orchestration",
+    "troop",
+    "worktrees"
+  ],
+  "author": "twoBoots",
+  "license": "MIT",
+  "devDependencies": {
+    "@earendil-works/pi-agent-core": "^0.84.4",
+    "@types/node": "^22.13.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "oxlint": "^1.80.0",
+    "rolldown": "^1.2.6",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": ">=0.80.0"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-agent-core": {
+      "optional": true
+    }
+  }
+}
